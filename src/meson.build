@@ -28,6 +28,7 @@ vala_sources = [
   'libvirt-cloned-media.vala',
   'libvirt-media.vala',
   'iso-extractor.vala',
+  'icon-view-child.vala',
   'libvirt-broker.vala',
   'libvirt-machine.vala',
   'libvirt-machine-properties.vala',
