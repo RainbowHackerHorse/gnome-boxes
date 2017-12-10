@@ -53,7 +53,6 @@ libgd_dep = libgd.get_variable('libgd_dep')
 
 po_dir = join_paths (meson.source_root (), 'po')
 data_dir = join_paths (get_option ('prefix'), get_option ('datadir'))
-locale_dir = join_paths (data_dir, '/locale')
 
 conf = configuration_data ()
 conf.set_quoted ('DISTRIBUTOR_NAME', get_option ('distributor_name'))
@@ -65,7 +64,7 @@ conf.set_quoted ('GETTEXT_PACKAGE', meson.project_name ())
 conf.set('PACKAGE_URL', '"https://wiki.gnome.org/Apps/Boxes"')
 conf.set_quoted ('DATADIR', data_dir)
 conf.set_quoted ('CACHEDIR', '/var/cache')
-conf.set_quoted ('LOCALEDIR', locale_dir)
+conf.set_quoted ('LOCALEDIR', get_options ('localedir'))
 conf.set('PACKAGE_BUGREPORT', '"https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-boxes"')
 
 if get_option ('ovirt')
